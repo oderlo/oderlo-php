@@ -16,12 +16,6 @@ if (!function_exists('json_decode')) {
 // // Configurations
 require_once('Oderlo/Config.php');
 
-// // Oderlo API Resources
-// require_once('Oderlo/Transaction.php');
-
 // Plumbing
 require_once('Oderlo/ApiRequestor.php');
 require_once('Oderlo/Email.php');
-
-// Sanitization
-require_once('Oderlo/Sanitizer.php');
