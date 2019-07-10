@@ -31,8 +31,8 @@ class Oderlo_Config {
 	 */
 	public static $curlOptions = array();
 
-	const SANDBOX_BASE_URL = 'https://api.sandbox.oderlo.com';
-	const PRODUCTION_BASE_URL = 'https://api.oderlo.com';
+	const SANDBOX_ENDPOINT = 'https://api.sandbox.oderlo.com';
+	const PRODUCTION_ENDPOINT = 'https://api.oderlo.com';
 
 	/**
 	 * @return string Oderlo API URL, depends on $isProduction
@@ -40,6 +40,6 @@ class Oderlo_Config {
 	public static function getBaseUrl()
 	{
 		return Oderlo_Config::$isProduction ?
-				Oderlo_Config::PRODUCTION_BASE_URL : Oderlo_Config::SANDBOX_BASE_URL;
+				Oderlo_Config::PRODUCTION_ENDPOINT : Oderlo_Config::SANDBOX_ENDPOINT;
 	}
 }
