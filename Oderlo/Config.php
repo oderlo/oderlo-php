@@ -15,6 +15,11 @@ class Oderlo_Config {
 	 */
 	public static $clientKey;
 	/**
+   * Enable request params sanitizer (validate and modify charge request params).
+   * @static
+   */
+  public static $isSanitized = false;
+	/**
 	 * true for production
 	 * false for sandbox mode
 	 * @static

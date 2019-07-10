@@ -19,7 +19,7 @@ class Oderlo_Sanitizer {
    * @param mixed[] $json
    */
   public static function jsonRequest(&$json){
-    $keys = array('item_details', 'customer_details');
+    $keys = array('email');
     foreach ($keys as $key) {
       if (!array_key_exists($key, $json)) continue;
 
@@ -39,6 +39,13 @@ class Oderlo_Sanitizer {
       $item['name'] = $name
           ->maxLength(50)
           ->apply($item['name']);
+    }
+  }
+
+  private static function fieldEmail(&$items){
+    if (filter_var($items, FILTER_VALIDATE_EMAIL)) {
+      $email = new self;
+      $item['email'] = $email->maxLength(50)->apply($item['email']);
     }
   }
 

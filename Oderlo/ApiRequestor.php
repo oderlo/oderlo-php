@@ -12,8 +12,7 @@ class Oderlo_ApiRequestor {
 	 * @param string  $server_key
 	 * @param mixed[] $data_hash
 	 */
-	public static function get($url, $server_key, $data_hash)
-	{
+	public static function get($url, $server_key, $data_hash){
 		return self::remoteCall($url, $server_key, $data_hash, false);
 	}
 
@@ -23,8 +22,7 @@ class Oderlo_ApiRequestor {
 	 * @param string  $server_key
 	 * @param mixed[] $data_hash
 	 */
-	public static function post($url, $server_key, $data_hash)
-	{
+	public static function post($url, $server_key, $data_hash){
 		return self::remoteCall($url, $server_key, $data_hash, true);
 	}
 
@@ -72,7 +70,6 @@ class Oderlo_ApiRequestor {
 				$curl_options[CURLOPT_POSTFIELDS] = '';
 			}
 		}
-
 		curl_setopt_array($ch, $curl_options);
 
 		// For testing purpose
